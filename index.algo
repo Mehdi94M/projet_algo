@@ -1,18 +1,19 @@
 ALGORITHM number 
 VAR
     N_c,N_w,N_v : INTEGER;
-    ch : STRING;
+    sentence: STRING;
+    c:CHAR;
 BEGIN
-    read(ch)
+    read(sentence)
     N_c:=0;
     N_v:=0;
     N_w:=1;
-    WHILE (ch<>'.') DO
+    WHILE (c<>'.') DO
       N_c:=N_c+1;
-      IF (ch in [a, e, i, o, u, y]) THEN
+      IF (c in ["a","e","i","o","u","A","E","I","O","U"]) THEN
           N_v:=N_v+1;
       END_IF  
-      IF (ch =" ") THEN
+      IF (c =" ") THEN
           N_w:=N_w+1;
       END_IF
     END_WHILE
