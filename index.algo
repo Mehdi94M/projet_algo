@@ -1,0 +1,20 @@
+ALGORITHM number 
+VAR
+    N_c,N_w,N_v : INTEGER;
+    ch : STRING;
+BEGIN
+    read(ch)
+    N_c:=0;
+    N_v:=0;
+    N_w:=1;
+    WHILE (ch<>'.') DO
+      N_c:=N_c+1;
+      IF (ch in [a, e, i, o, u, y]) THEN
+          N_v:=N_v+1;
+      END_IF  
+      IF (ch =" ") THEN
+          N_w:=N_w+1;
+      END_IF
+    END_WHILE
+    write("the number of characters :",N_c,"The number of words :",N_w,"The number of vowels :",N_v)
+END
